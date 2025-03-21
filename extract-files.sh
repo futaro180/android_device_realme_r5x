@@ -70,6 +70,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
+       system_ext/framework/oplus-ims-ext.jar)
+            [ "$2" = "" ] && return 0
+            apktool_patch "${2}" "${MY_DIR}/blob-patches/oplus-ims-ext.patch" -r
+            ;;
        *)
             return 1
             ;;
