@@ -5,4 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_r5x.mk
+    $(LOCAL_DIR)/miku_r5x.mk
+
+COMMON_LUNCH_CHOICES := \
+     miku_r5x-user \
+     miku_r5x-userdebug \
+     miku_r5x-eng
